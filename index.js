@@ -25,12 +25,23 @@ function getComputerChoice(){
 
 
 
-// function playRound(playerSelection, computerSelection){
-//     if(playerSelection === computerSelection){
-//         return `Tie game, you both picked ${computerSelection}`;
-//     } else if(playerSelection.ignoreCase == `rock` && computerSelection.ignoreCase == `Paper`){
-//         return `You Lose, ${computerSelection} beats ${playerSelection}`;
-//     }
+function playRound(playerSelection, computerSelection){
+    if(playerSelection === computerSelection){
+        return `Tie game, you both picked ${computerSelection}`;
+    } else if(playerSelection.ignoreCase == `rock` && computerSelection.ignoreCase == `paper`){
+        return `You Lose, ${computerSelection} beats ${playerSelection}`;
+    }else if(playerSelection.ignoreCase == `rock` && computerSelection.ignoreCase == `scissors`){
+        return `You Win, ${playerSelection} beats ${computerSelection}`;
+    }else if(playerSelection.ignoreCase == `paper` && computerSelection.ignoreCase == `rock`){
+        return `You Win, ${playerSelection} beats ${computerSelection}`;
+    }else if(playerSelection.ignoreCase == `paper` && computerSelection.ignoreCase == `scissors`){
+        return `You Lose, ${computerSelection} beats ${playerSelection}`;
+    }else if(playerSelection.ignoreCase == `scissors` && computerSelection.ignoreCase == `rock`){
+        return `You Lose, ${computerSelection} beats ${playerSelection}`;
+    }else if(playerSelection.ignoreCase == `scissors` && computerSelection.ignoreCase == `Paper`){
+        return `You Win, ${playerSelection} beats ${computerSelection}`;
+    }
     
 
-// }
+}
+
