@@ -1,3 +1,5 @@
+
+
 function getComputerChoice(){
     //math.floor returns the largest integer less than or equal to the given number
     //Math.random returns a number between 0 and 1
@@ -26,6 +28,9 @@ function getComputerChoice(){
 
 
 function playRound(playerSelection, computerSelection){
+
+let playerSelection;
+let computerSelection;
     if(playerSelection === computerSelection){
         return `Tie game, you both picked ${computerSelection}`;
     } else if(playerSelection.ignoreCase == `rock` && computerSelection.ignoreCase == `paper`){
@@ -45,3 +50,34 @@ function playRound(playerSelection, computerSelection){
 
 }
 
+// const playerSelection = `rock`;
+// const computerSelection = getComputerChoice();
+
+// console.log(playerSelection,computerSelection);
+
+
+//the game function 
+function game(){
+
+    let playerCount;
+    let computerCount;
+    
+    for(let i = 0; i<=5; i++){
+        let playerSelection = prompt('Pick Rock, paper or scissors');
+        let round = playRound(playerSelection, computerSelection);
+
+        if(round.slice(0,6) == `You Win`){
+            playerCount++;
+        }else if(round.slice(0,6)== `You Lose`){
+            computerCount++;
+        }else{}
+    }
+
+    let winner = max(playerCount,computerCount);
+    return winner;
+}
+
+// let playerSelection;
+// let computerSelection;
+
+game();
